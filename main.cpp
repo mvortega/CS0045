@@ -23,13 +23,12 @@ GLfloat trianglevertex[] =
 glEnableClientState(GL_VERTEX_ARRAY);
 }
 void point(){
-glPointSize(20.0);
-glBegin(GL_POINTS);
-glVertex2f(-0.45f, -0.45f);
-glVertex2f(-0.45f, 0.45f);
-glVertex2f(0.45f, 0.45f);
-glVertex2f(0.45f, -0.45f);
-glEnd();
+	glPointSize(20.0);
+	
+	GLfloat pointvertex[] = {
+	
+	};
+	
 }
 void defaultDisplay(){
 glClear(GL_COLOR_BUFFER_BIT);

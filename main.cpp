@@ -8,16 +8,16 @@ int main(int argc, char **argv){
 glutInit(&argc, argv);
 glutInitWindowSize(1024,768);
 glutInitWindowPosition(200,50);
-glutCreateWindow("My First OpenGL");
+glutCreateWindow("Green Triangle");
 glutDisplayFunc(defaultDisplay);
 glutMainLoop();
 return 0;
 }
 void triangle(){
 glBegin(GL_TRIANGLES);
-glVertex2f(0.0f, .75f);
-glVertex2f(-0.75f,  0.0f);
-glVertex2f(0.75f, 0.0f);
+glVertex2f(0.0f, 0.45f);
+glVertex2f(-0.45f, 0.0f);
+glVertex2f(0.45f, 0.0f);
 glEnd();
 }
 void point(){

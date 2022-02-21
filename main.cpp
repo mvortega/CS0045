@@ -23,10 +23,10 @@ glEnd();
 void point(){
 glPointSize(20.0);
 glBegin(GL_POINTS);
-glVertex2f(-0.75f,  -0.75f);
-glVertex2f(-0.75f,  0.75f);
-glVertex2f(0.75f,  0.75f);
-glVertex2f(0.75f,  -0.75f);
+glVertex2f(-0.45f, -0.45f);
+glVertex2f(-0.45f, 0.45f);
+glVertex2f(0.45f, 0.45f);
+glVertex2f(0.45f, -0.45f);
 glEnd();
 }
 void defaultDisplay(){

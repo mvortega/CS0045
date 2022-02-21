@@ -14,11 +14,13 @@ glutMainLoop();
 return 0;
 }
 void triangle(){
-glBegin(GL_TRIANGLES);
-glVertex2f(0.0f, 0.45f);
-glVertex2f(-0.45f, 0.0f);
-glVertex2f(0.45f, 0.0f);
-glEnd();
+GLfloat trianglevertex[] = 
+{
+   0.0f, 0.45f, 0.0f,
+  -0.45f, 0.0f, 0.0f,
+   0.45f, 0.0f, 0.0f
+};
+glEnableClientState(GL_VERTEX_ARRAY);
 }
 void point(){
 glPointSize(20.0);

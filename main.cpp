@@ -25,12 +25,10 @@ glEnableClientState(GL_VERTEX_ARRAY);
 void point(){
 	glPointSize(20.0);
 	
-	GLfloat pointvertex[] = {
-	-0.45f, -0.45f,
-	-0.45f, 0.45f,
-	0.45f, 0.45f,
-	0.45f, -0.45f
-	};
+	glVertex2f(-0.45f, -0.45f);
+	glVertex2f(-0.45f, 0.45f);
+	glVertex2f(0.45f, 0.45f);
+	glVertex2f(0.45f, -0.45f);
 	
 }
 void defaultDisplay(){

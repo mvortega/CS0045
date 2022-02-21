@@ -23,14 +23,24 @@ GLfloat trianglevertex[] =
 glEnableClientState(GL_VERTEX_ARRAY);
 glVertexPointer(3, GL_FLOAT, 0, trianglevertex);
 }
+
 void point(){
 	glPointSize(20.0);
 	
-	GLfloat pointvertex[] = {
-	
-	};
+	 GLfloat pointvertex[] = { 
+        -0.75f, -0.75f, 0.0f,
+        -0.75f, 0.75f, 0.0f,
+        0.75f, 0.75f, 0.0f,
+        0.75f, -0.75f, 0.0f
+    };
+    
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glVertexPointer(3, GL_FLOAT, 0, pointvertex);
+    glDrawArrays(GL_POINTS, 0, 4);
+    glDisableClientState(GL_VERTEX_ARRAY);
 	
 }
+
 void defaultDisplay(){
 glClear(GL_COLOR_BUFFER_BIT);
 glColor4f(.16f, .72f, .08f, 1.0f);

@@ -21,6 +21,9 @@ GLfloat trianglevertex[] =
    0.45f, 0.0f, 0.0f
 };
 glEnableClientState(GL_VERTEX_ARRAY);
+glVertexPointer(3, GL_FLOAT, 0, trianglevertex);
+glDrawArrays(GL_TRIANGLES, 0, 3);
+glDisableClientState(GL_VERTEX_ARRAY);
 }
 void point(){
 	glPointSize(20.0);

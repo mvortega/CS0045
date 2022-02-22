@@ -14,6 +14,7 @@ glutDisplayFunc(defaultDisplay);
 glutMainLoop();
 return 0;
 }
+
 void triangle(){
 GLfloat trianglevertex[] = 
 {
@@ -26,12 +27,12 @@ glEnableClientState(GL_VERTEX_ARRAY);
 glVertexPointer(3, GL_FLOAT, 0, trianglevertex);
 glDrawArrays(GL_TRIANGLES, 0, 3);
 glDisableClientState(GL_VERTEX_ARRAY);
-	
+
 }
 
 void point(){
-	glPointSize(20.0);
 	
+
 
 	 GLfloat pointvertex[] = { 
         -0.75f, -0.75f, 0.0f,
@@ -49,6 +50,21 @@ void point(){
 	glVertex2f(-0.45f, 0.45f);
 	glVertex2f(0.45f, 0.45f);
 	glVertex2f(0.45f, -0.45f);
+
+
+glPointSize(20.0);
+	
+GLfloat pointvertex[] = { 
+    -0.75f, -0.75f, 0.0f,
+    -0.75f, 0.75f, 0.0f,
+     0.75f, 0.75f, 0.0f,
+     0.75f, -0.75f, 0.0f
+    };
+    
+glEnableClientState(GL_VERTEX_ARRAY);
+glVertexPointer(3, GL_FLOAT, 0, pointvertex);
+glDrawArrays(GL_POINTS, 0, 4);
+glDisableClientState(GL_VERTEX_ARRAY);
 
 	
 }

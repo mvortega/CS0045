@@ -4,6 +4,7 @@ using namespace std;
 void defaultDisplay();
 void point();
 void triangle();
+
 int main(int argc, char **argv){
 glutInit(&argc, argv);
 glutInitWindowSize(1024,768);
@@ -21,14 +22,36 @@ GLfloat trianglevertex[] =
   -0.45f, 0.0f, 0.0f,
    0.45f, 0.0f, 0.0f
 };
+	
 glEnableClientState(GL_VERTEX_ARRAY);
 glVertexPointer(3, GL_FLOAT, 0, trianglevertex);
 glDrawArrays(GL_TRIANGLES, 0, 3);
 glDisableClientState(GL_VERTEX_ARRAY);
+
 }
 
 void point(){
 	
+
+
+	 GLfloat pointvertex[] = { 
+        -0.75f, -0.75f, 0.0f,
+        -0.75f, 0.75f, 0.0f,
+        0.75f, 0.75f, 0.0f,
+        0.75f, -0.75f, 0.0f
+    };
+    
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glVertexPointer(3, GL_FLOAT, 0, pointvertex);
+    glDrawArrays(GL_POINTS, 0, 4);
+    glDisableClientState(GL_VERTEX_ARRAY);
+
+	glVertex2f(-0.45f, -0.45f);
+	glVertex2f(-0.45f, 0.45f);
+	glVertex2f(0.45f, 0.45f);
+	glVertex2f(0.45f, -0.45f);
+
+
 glPointSize(20.0);
 	
 GLfloat pointvertex[] = { 
@@ -42,6 +65,7 @@ glEnableClientState(GL_VERTEX_ARRAY);
 glVertexPointer(3, GL_FLOAT, 0, pointvertex);
 glDrawArrays(GL_POINTS, 0, 4);
 glDisableClientState(GL_VERTEX_ARRAY);
+
 	
 }
 

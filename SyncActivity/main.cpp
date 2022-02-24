@@ -20,7 +20,7 @@ return 0;
 
 void defaultDisplay(){
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor4f(.16f, .72f, .08f, 1.0f);
+    glColor4f(0.0f, 1.0f, 1.0f, 1.0f);
     point();
     triangle();
     glFlush();
@@ -58,12 +58,20 @@ void triangle(){
 	
 	GLfloat triangleVertex[] = {
 		0.0f, .75f, 0.0f, 
-		-0.75f, 0.0f, 0.0f,
-		0.75f, 0.0f, 0.0f
+		-0.6f, 0.2f, 0.0f,
+		0.6f, 0.2f, 0.0f,
+		
+		0.0f, 0.2f, 0.0f,
+		-0.6f, -0.4f, 0.0f,
+		0.6f, -0.4f, 0.0f, 
+		
+		0.0f, -0.4f, 0.0f, 
+		-0.6f, -0.9f, 0.0f, 
+		0.6f, -0.9f, 0.0f	
 	};
 	
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glVertexPointer(3, GL_FLOAT, 0, triangleVertex);
-	glDrawArrays(GL_TRIANGLES, 0, 3);
+	glDrawArrays(GL_TRIANGLES, 0, 9);
 	glDisableClientState(GL_VERTEX_ARRAY);
 }

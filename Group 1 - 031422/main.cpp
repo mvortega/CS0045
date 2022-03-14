@@ -17,6 +17,8 @@ GLfloat polygonvertices[] = {
 	-1.0f,0.0f,0.0f //sixth vertex
 };
 
+//add GLfloat *mapV
+
 int main(int argc, char** argv){
 	
 	glutInit(&argc, argv);
@@ -31,6 +33,7 @@ int main(int argc, char** argv){
 	}
 }
 
+//make changes - ARIAS
 void polygon(){
 	
 	GLuint VBOid;
@@ -49,12 +52,17 @@ void polygon(){
 	
 }
 
+//void modifyPolygon(int value) - BALALA
+
+//void translate(float x, float y, float z, int startindex) - BAYNOSA
+
 void display(){
 	
 	glClear(GL_COLOR_BUFFER_BIT);
 	glColor4f(.16f,.72f,.08f,1.0f);
 	polygon();
 	glFlush();
+	//add glutTimer
 	
 }
 

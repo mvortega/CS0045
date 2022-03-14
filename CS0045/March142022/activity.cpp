@@ -27,6 +27,7 @@ void polygon(){
 	glBegin(GL_LINE_LOOP);
 	glVertex3f(-0.5f,0.5f,0.0f);
 	glVertex3f(0.5f,0.5f,0.0f);
+	glVertex3f(1.0f,0.0f,0.0f,);
 	//insert vertex here
 	
 	glLineWidth(6);

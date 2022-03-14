@@ -17,7 +17,7 @@ GLfloat polygonvertices[] = {
 	-1.0f,0.0f,0.0f //sixth vertex
 };
 
-//add GLfloat *mapV
+//add GLfloat *mapV - ANDAYA
 
 int main(int argc, char** argv){
 	
@@ -59,10 +59,10 @@ void polygon(){
 void display(){
 	
 	glClear(GL_COLOR_BUFFER_BIT);
-	glColor4f(.16f,.72f,.08f,1.0f);
+	glColor4f(.16f,.72f,.08f,1.0f); //CHANGE COLOR - ANDAYA
 	polygon();
 	glFlush();
-	//add glutTimer
+	//add glutTimer - ANDAYA 
 	
 }
 

@@ -13,7 +13,8 @@ float angle = 1.0f;
 GLfloat trianglevertices[] = { //changed vertices so shapes is square
 -0.6f, .8f, 0.0f,
 0.6f, .8f, 0.0f,
-//add other vertices here
+0.6f, 0.0f, 0.0f,
+-0.6f, 0.0f, 0.0f,
 };
 int main(int argc, char** argv){
 glutInit(&argc, argv);

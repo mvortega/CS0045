@@ -10,10 +10,10 @@ void keyBoardMonitor(unsigned char key, int x, int y);
 GLuint VBOid;
 bool initTriangle = true;
 float angle = 1.0f;
-GLfloat trianglevertices[] = {
-0.0f, .75f, 0.0f,
--0.75f, 0.0f, 0.0f,
-0.75f, 0.0f, 0.0f
+GLfloat trianglevertices[] = { //changed vertices so shapes is square
+-0.6f, .8f, 0.0f,
+0.6f, .8f, 0.0f,
+//add other vertices here
 };
 int main(int argc, char** argv){
 glutInit(&argc, argv);
@@ -31,7 +31,7 @@ void triangle(){
 if(initTriangle){
 glGenBuffers(1, &VBOid);
 glBindBuffer(GL_ARRAY_BUFFER, VBOid);
-glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*9, trianglevertices, GL_STATIC_DRAW);
+glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*12, trianglevertices, GL_STATIC_DRAW); //changed sizeof from 9 to 12 (for # of points)
 glEnableClientState(GL_VERTEX_ARRAY);
 glMatrixMode(GL_MODELVIEW);
 glLoadIdentity();
@@ -42,7 +42,7 @@ initTriangle= false;
 glPushMatrix();
 glRotatef(angle,0.0f,0.0f,-1.0); //altered from counter-clockwise to clockwise
 glVertexPointer(3, GL_FLOAT, 0, 0);
-glDrawArrays(GL_TRIANGLES,0,6);
+glDrawArrays(GL_QUADS,0,4); //changed GL_TRIANGLES to GL_QUADS and replaced count from 6 to 4
 glPopMatrix();
 }
 void animateTriangle(int value){

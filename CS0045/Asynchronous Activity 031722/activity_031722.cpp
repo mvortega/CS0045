@@ -40,7 +40,7 @@ glScalef(.75f,.75f,0.0f);
 initTriangle= false;
 }
 glPushMatrix();
-glRotatef(angle,0.0f,0.0f,1.0);
+glRotatef(angle,0.0f,0.0f,-1.0); //altered from counter-clockwise to clockwise
 glVertexPointer(3, GL_FLOAT, 0, 0);
 glDrawArrays(GL_TRIANGLES,0,6);
 glPopMatrix();

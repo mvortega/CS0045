@@ -51,7 +51,7 @@ glutPostRedisplay();
 }
 void display(){
 glClear(GL_COLOR_BUFFER_BIT);
-glColor4f(.16f,.72f,.08f,1.0f);
+glColor4f(0.0f,0.0f,1.0f,0.0f); //altered color from green to blue
 triangle();
 glFlush();
 glutTimerFunc(200,animateTriangle,1);

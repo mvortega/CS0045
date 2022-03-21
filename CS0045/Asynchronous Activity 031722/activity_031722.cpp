@@ -8,13 +8,13 @@ void triangle();
 void init();
 void keyBoardMonitor(unsigned char key, int x, int y);
 GLuint VBOid;
-bool initTriangle = true;
+bool initSquare = true;
 float angle = 1.0f;
-GLfloat trianglevertices[] = { //changed vertices so shapes is square
--0.6f, .8f, 0.0f,
-0.6f, .8f, 0.0f,
-0.6f, 0.0f, 0.0f,
--0.6f, 0.0f, 0.0f,
+GLfloat squarevertices[] = { //changed vertices so shapes is square
+-0.6f, .6f, 0.0f, 
+0.6f, .6f, 0.0f,
+0.6f, -.6f, 0.0f, // changed square size to 0.6 x 0.06
+-0.6f, -.6f, 0.0f,
 };
 int main(int argc, char** argv){
 glutInit(&argc, argv);
@@ -32,7 +32,7 @@ void triangle(){
 if(initTriangle){
 glGenBuffers(1, &VBOid);
 glBindBuffer(GL_ARRAY_BUFFER, VBOid);
-glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*12, trianglevertices, GL_STATIC_DRAW); //changed sizeof from 9 to 12 (for # of points)
+glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*12, squarevertices, GL_STATIC_DRAW); //changed sizeof from 9 to 12 (for # of points)
 glEnableClientState(GL_VERTEX_ARRAY);
 glMatrixMode(GL_MODELVIEW);
 glLoadIdentity();

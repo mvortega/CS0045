@@ -113,7 +113,7 @@ void displayObject(){
     glLightfv(GL_LIGHT1,GL_DIFFUSE, lightcolor1);
     glLightfv(GL_LIGHT1,GL_POSITION,lightposition1); 
     glLightfv(GL_LIGHT1,GL_SPOT_DIRECTION,spotdirection); 
-    glLightf(GL_LIGHT1,GL_SPOT_CUTOFF, 10.0);
+    glLightf(GL_LIGHT1,GL_SPOT_CUTOFF, 15.0);
     glutSolidCube(1.0);
     glFlush();
 }

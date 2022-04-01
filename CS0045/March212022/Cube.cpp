@@ -108,7 +108,7 @@ void displayObject(){
     
     //Spotlight
     GLfloat lightposition1[] = {0.0f, 4.0f,0.0f, 1.0f};
-    GLfloat lightcolor1[] = {1.0f, 0.2f, 0.2f, 1.0f};
+    GLfloat lightcolor1[] = {1.0f, 0.2f, 1.0f, 0.2f};
     GLfloat spotdirection[] = {0.0f, -1.0f, 0.0f}; 
     glLightfv(GL_LIGHT1,GL_DIFFUSE, lightcolor1);
     glLightfv(GL_LIGHT1,GL_POSITION,lightposition1); 
